@@ -13,4 +13,13 @@
       <p> Owner : <%= @user.email %></p>
     </div>
   </div>
+  <div class="form-wrapper mt-4">
+    <%= simple_form_for [ @car, @booking ] do |f| %>
+      <p>Start date*</p>
+        <%= f.date_field :starts_at, as: :string, class:"form-control text optional" %>
+        <p>End date*</p>
+        <%= f.date_field :ends_at, class:"form-control text optional" %>
+      <%= f.submit "Book", class: "btn btn-primary mt-2" %>
+    <% end %>
+  </div>
 </div>

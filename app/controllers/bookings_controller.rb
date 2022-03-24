@@ -1,18 +1,31 @@
-# class CarsController < ApplicationController
+class BookingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :home, :index, :show ]
 
-#   def create
-#     @booking = Car.new(booking_params)
-#     @car = Car.find(params[:car_id])
+  def create
+    @booking = Booking.new(booking_params)
+    @car = Car.find(params[:car_id])
 
-#     @booking.car = @car
-#     @booking.user = current_user
+    if current_user.nil?
+      return redirect_to new_user_session_path, notice: "Please, log yourself first"
+    end
+    if @booking.starts_at.nil? || @booking.ends_at.nil?
+      return redirect_to car_path(@car), notice: "Dates are incorrect"
+    end
 
-#   end
+    @booking.car = @car
+    @booking.user = current_user
+    @booking.accepted = true
+    if @booking.save
+      redirect_to car_path(@car), notice: "Your booking is confirmed"
+    else
+      render "cars/show"
+    end
+  end
 
-#   private
+  private
 
-#   def booking_params
-#     params.require(:booking).permit(:starts_at, :ends_at)
-#   end
+  def booking_params
+    params.require(:booking).permit(:starts_at, :ends_at)
+  end
 
-# end
+end
