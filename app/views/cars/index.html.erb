@@ -1,16 +1,15 @@
 <div class="container">
-  <div class="title">
+  <div class="title mt-5 mb-5">
     <h1>Find a car</h1>
   </div>
 
-  <div class="card-container">
+  <ul class="list-group">
     <% @cars.each do |car| %>
-      <% link_to car_path(car) do %>
-        <div class="cards">
-          <div class="card-title">
-            <h2><i class="fas fa-car"></i> <%= car.brand %> <%= car.model %> <%= car.year_of_production %></h2>
-          </div>
-        </div>
-      <% end %>
-  </div>
-<div>
+      <li class="list-group-item">
+        <%# <% link_to car_path(car) do %>
+          <i class="fas fa-car-alt"></i> <strong><%= car.brand %> <%= car.model %></strong>
+        <%# <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
