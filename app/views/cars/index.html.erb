@@ -6,9 +6,9 @@
   <ul class="list-group">
     <% @cars.each do |car| %>
       <li class="list-group-item">
-        <%# <% link_to car_path(car) do %>
+        <%= link_to car_path(car) do %>
           <i class="fas fa-car-alt"></i> <strong><%= car.brand %> <%= car.model %></strong>
-        <%# <% end %>
+        <% end %>
       </li>
     <% end %>
   </ul>

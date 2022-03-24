@@ -7,7 +7,7 @@ class CarsController < ApplicationController
 
   def show
     @car = Car.find(params[:id])
-    @user = @car.tree
+    @user = @car.user
     @booking = Booking.new
   end
 end
