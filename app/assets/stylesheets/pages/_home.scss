@@ -1,1 +1,41 @@
 // Specific CSS for your home-page
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.link-btn {
+  background-color: white;
+  color: rgb(50, 57, 68);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+  width: 20%;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  &:hover{
+    background-color: rgb(214, 229, 255)
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+  }
+ }
