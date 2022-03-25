@@ -6,7 +6,7 @@ body {
   .title {
     text-align: center;
     margin: 0px auto;
-    width: 500px;
+    width: 600px;
     h1 {
     background-color: rgb(50, 57, 68);
     font-weight: bolder;
@@ -14,20 +14,20 @@ body {
     color: white;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    padding: 6px;
+    padding: 15px;
     }
   }
+  a {
+    text-decoration: none;
+    color: rgb(50, 57, 68);
+    font-weight: 500;
+  }
   li {
-    width: 500px;
+    width: 600px;
     i {
       font-size: 20px;
       margin-right: 5px;
       color: rgb(50, 57, 68);
-    }
-    a {
-      text-decoration: none;
-      color: rgb(50, 57, 68);
-      font-weight: 500;
     }
   }
 }
