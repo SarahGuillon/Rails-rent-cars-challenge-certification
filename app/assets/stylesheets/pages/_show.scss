@@ -1,0 +1,52 @@
+.back-index {
+  a {
+  display: block;
+  color: rgb(50, 57, 68);
+  }
+}
+
+.card-car {
+  color:  rgb(50, 57, 68);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 80px;
+  .price {
+    font-size: 25px;
+  }
+  i {
+    margin-right: 8px;
+  }
+  h1 {
+    font-weight: 600;
+  }
+  .form-wrapper {
+    width: 30%;
+    .btn {
+      width: 100%;
+      background-color: rgb(50, 57, 68);
+      border-radius: 5px;
+      border-color: rgb(50, 57, 68);
+      font-weight: bold;
+      font-size: 20px;
+      padding: 5px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      color: white;
+      &:hover{
+        background-color: rgb(106, 120, 145)
+      }
+    }
+    input {
+      font-size: 14px;
+      color: grey;
+    }
+    p {
+      margin-bottom: 4px;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,11 +1,10 @@
-<div class="container">
-  <div class="title mt-5 mb-5">
+<div class="container cars-list mt-3">
+  <div class="title">
     <h1>Find a car</h1>
   </div>
-
-  <ul class="list-group">
+  <ul class="list-group mt-4">
     <% @cars.each do |car| %>
-      <li class="list-group-item">
+      <li class="list-group-item list-group-item-action mb-2">
         <%= link_to car_path(car) do %>
           <i class="fas fa-car-alt"></i> <strong><%= car.brand %> <%= car.model %></strong>
         <% end %>
